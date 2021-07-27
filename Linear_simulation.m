@@ -23,7 +23,7 @@ function [V_pre] = Linear_simulation(G,deltaT,RandInput,Ttotal,ext)
 	T = Ttotal/deltaT; % by default, simulate 1000 seconds
 	V_pre = zeros(T, N);
 	I = zeros(T, N);
-	if all(isnan(ext),'all')
+	if all(isnan(ext))
 		ext = zeros(T,N);
 	end
 	tic
